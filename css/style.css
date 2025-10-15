@@ -65,6 +65,108 @@ main {
   background-color: #ff6347;
 }
 
+/* Blog Post Layout */
+article {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  color: #2e8b57; /* Green for post title */
+  margin-bottom: 0.5rem;
+}
+
+article h3 {
+  color: #003366; /* Blue for subheadings */
+  margin-top: 2rem;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #2e8b57;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3cb371;
+}
+
+/* Blog Post Styling */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+  color: #2e8b57; /* Green for post title */
+  margin-bottom: 1rem;
+}
+
+main h3 {
+  color: #003366; /* Blue for subheadings */
+  margin-top: 1.5rem;
+}
+
+main p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+main a {
+  color: #2e8b57;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: #ff7f50; /* Orange hover for CTA feel */
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #2e8b57;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3cb371;
+}
+
 /* Footer */
 footer {
   text-align: center;
