@@ -1,39 +1,71 @@
+/* Base layout */
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #ffffff; /* Clean white background */
+  color: #333333; /* Dark readable text */
 }
 
+/* Header */
 header {
-  background-color: #3da1ed;
-  /* background-color: ##33a2ebf5; */
-  /* background-color: #4CAF50; */
+  background-color: #003366; /* Navy blue */
   color: white;
   padding: 1.5rem;
   text-align: center;
 }
 
+/* Navigation */
 nav a {
   color: white;
   margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
+  color: #90ee90; /* Light green hover */
   text-decoration: underline;
 }
 
+/* Main content */
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: white;
+  background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-green {
+  background-color: #2e8b57; /* Smart green */
+  color: white;
+}
+.button-green:hover {
+  background-color: #3cb371;
+}
+
+.button-orange {
+  background-color: #ff7f50; /* Energetic orange */
+  color: white;
+}
+.button-orange:hover {
+  background-color: #ff6347;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
