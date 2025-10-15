@@ -252,6 +252,14 @@ button:hover {
   display: none; /* toggle with JS */
 }
 
+.contact-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+}
+
 /* Additional styles can be added here for other pages as needed. */
 
 /* Footer */
