@@ -2,7 +2,7 @@
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
-  background-color: pink; /* Clean white background */
+  background-color: #ffffff; /* Clean white background */
   color: #333333; /* Dark readable text */
 }
 
@@ -226,6 +226,30 @@ button:hover {
   color: #888;
   margin-top: 10px;
   text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.alt-contact {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.success-message {
+  background-color: #e6ffe6;
+  color: #2e8b57;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 1rem;
+  display: none; /* toggle with JS */
 }
 
 /* Additional styles can be added here for other pages as needed. */
