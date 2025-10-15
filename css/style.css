@@ -1,5 +1,32 @@
+:root {
+  --bs-blue: #0d6efd; /* Primary */
+}
+css/style.css /index.html /about.html /blog.html /contact.html .index {
+  background-color: #f0f0f0;
+}
+
+.about {
+  background-color: #e0e0e0;
+}
+
+.blog {
+  background-color: #d0d0d0;
+}
+
+.contact {
+  background-color: #c0c0c0;
+}
+
+/*
+original css */
+/*
 css/style.css
 /index.html
 /about.html
 /blog.html
 /contact.htm
+*/
+
+/*
+Additional styles can be added here for other pages as needed.
+*/
