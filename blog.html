@@ -10,9 +10,14 @@
     <header>
       <h1>Smart Grocery Savings Blog</h1>
       <p>Tips, tricks, and updates for saving more on groceries</p>
+      <nav>
+        <a href="index.html">Home</a> | <a href="about.html">About</a> |
+        <a href="blog.html">Blog</a> |
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
-    <main>
+    <main class="container">
       <figure>
         <img
           src="images/blog2.jpeg"
@@ -24,45 +29,52 @@
         </figcaption>
       </figure>
 
-      <section>
-        <h2>Blog Posts</h2>
-        <ul>
-          <li><a href="post_1.html">Top 5 Grocery Delivery Services</a></li>
-          <li><a href="post_2.html">Walmart+ vs Instacart</a></li>
-          <li><a href="post_3.html">7 Ways to Cut $50 Off</a></li>
-        </ul>
+      <section class="blog-grid">
+        <div class="blog-card">
+          <img
+            src="images/post1.jpeg"
+            alt="Grocery delivery services"
+            class="post-image"
+          />
+          <h3><a href="post_1.html">Top 5 Grocery Delivery Services</a></h3>
+          <p class="post-date">October 15, 2025</p>
+          <p>
+            Explore the best grocery delivery options and how they stack up for
+            savings and convenience.
+          </p>
+          <a href="post_1.html" class="button button-green">Read More</a>
+        </div>
+
+        <div class="blog-card">
+          <img
+            src="images/post2.jpeg"
+            alt="Walmart vs Instacart"
+            class="post-image"
+          />
+          <h3><a href="post_2.html">Walmart+ vs Instacart</a></h3>
+          <p class="post-date">October 15, 2025</p>
+          <p>
+            We compare two popular grocery platforms to help you decide which
+            offers better value.
+          </p>
+          <a href="post_2.html" class="button button-green">Read More</a>
+        </div>
+
+        <div class="blog-card">
+          <img
+            src="images/post3.jpeg"
+            alt="Save $50 on groceries"
+            class="post-image"
+          />
+          <h3><a href="post_3.html">7 Ways to Cut $50 Off</a></h3>
+          <p class="post-date">October 15, 2025</p>
+          <p>
+            Quick strategies to reduce your grocery bill without sacrificing
+            quality or nutrition.
+          </p>
+          <a href="post_3.html" class="button button-green">Read More</a>
+        </div>
       </section>
-
-      <article>
-        <h2>Welcome to Smart Grocery Savings!</h2>
-        <p class="date">June 2024</p>
-        <p>
-          Discover how to maximize your grocery budget with our latest tips and
-          features. Stay tuned for weekly updates on deals, recipes, and smart
-          shopping strategies!
-        </p>
-      </article>
-
-      <article>
-        <h2>5 Ways to Save on Your Next Grocery Trip</h2>
-        <p class="date">June 10, 2024</p>
-        <ul>
-          <li>Plan your meals and make a shopping list.</li>
-          <li>Use digital coupons and loyalty programs.</li>
-          <li>Compare prices online before heading out.</li>
-          <li>Buy in bulk for non-perishables.</li>
-          <li>Shop seasonal produce for better deals.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Feature Update: Price Tracker</h2>
-        <p class="date">June 5, 2024</p>
-        <p>
-          Our new price tracker helps you monitor grocery prices and alerts you
-          to discounts. Try it out and let us know your feedback!
-        </p>
-      </article>
     </main>
 
     <footer>

@@ -14,7 +14,7 @@ header {
   text-align: center;
 }
 
-/* grovery image banner and caption applied to all pages */
+/* grocery image banner and caption applied to all pages */
 .shared-banner {
   display: block;
   max-width: 100%;
@@ -46,6 +46,67 @@ header {
   font-size: 0.95rem;
   color: #555;
   margin-top: 0.5rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.blog-banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.banner-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.blog-card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #2e8b57;
+}
+
+.blog-card p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 /* Navigation */
@@ -293,6 +354,18 @@ button:hover {
   margin: 0 auto 2rem;
   border-radius: 8px;
 }
+
+/* Post 1 images */
+.service-image {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Post 2 images */
 
 /* Additional styles can be added here for other pages as needed. */
 
