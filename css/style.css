@@ -31,6 +31,16 @@ header {
   margin-top: 0.5rem;
 }
 
+/* blog image banner and caption */
+.blog-banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
 /* Navigation */
 nav a {
   color: white;
