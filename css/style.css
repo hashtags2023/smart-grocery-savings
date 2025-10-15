@@ -1,39 +1,8 @@
-:root {
-  --bs-blue: #0d6efd; /* Primary */
-}
-css/style.css /index.html /about.html /blog.html /contact.html .index {
-  background-color: #f0f0f0;
-}
-
-.about {
-  background-color: #e0e0e0;
-}
-
-.blog {
-  background-color: #d0d0d0;
-}
-
-.contact {
-  background-color: #c0c0c0;
-}
-
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
   background-color: #f9f9f9;
   color: #333;
-}
-h1,
-h2,
-h3 {
-  color: #2c3e50;
-}
-a {
-  color: var(--bs-blue);
-}
-
-a:hover {
-  color: var(--bs-blue);
 }
 header {
   background-color: #3da1ed;
@@ -42,24 +11,27 @@ header {
   text-align: center;
 }
 nav a {
-  margin: 0 1rem;
-  text-decoration: none;
   color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
 }
 nav a:hover {
   text-decoration: underline;
 }
 main {
+  max-width: 800px;
+  margin: 2rem auto;
   padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 footer {
-  background-color: #f1f1f1;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  border-top: 1px solid #ccc;
+  color: #666;
+  margin-top: 2rem;
 }
 
 /*
