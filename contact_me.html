@@ -2,14 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Contact Me - Grocery Savings</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Me - Smart Grocery Savings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
         font-family: Arial, sans-serif;
         background: #f8f9fa;
         margin: 0;
         padding: 0;
+      }
+      header {
+        background: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
       }
       .container {
         max-width: 500px;
@@ -60,11 +79,26 @@
         margin-top: 10px;
         text-align: center;
       }
+      footer {
+        text-align: center;
+        padding: 1rem;
+        color: #666;
+        margin-top: 40px;
+      }
     </style>
   </head>
   <body>
+    <header>
+      <h1>Contact Me</h1>
+      <nav>
+        <a href="index.html">Home</a> | <a href="about.html">About</a> |
+        <a href="blog.html">Blog</a> |
+        <a href="contact_me.html">Contact</a>
+      </nav>
+    </header>
+
     <div class="container">
-      <h2>Contact Me</h2>
+      <h2>We’d love to hear from you!</h2>
       <form>
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required />
@@ -81,5 +115,7 @@
         We value your feedback and questions about grocery savings!
       </div>
     </div>
+
+    <footer>&copy; 2025 Smart Grocery Savings. All rights reserved.</footer>
   </body>
 </html>
