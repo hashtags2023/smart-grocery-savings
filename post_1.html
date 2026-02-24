@@ -1,10 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Top 5 Grocery Delivery Services in 2025</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A detailed breakdown of the top 5 grocery delivery services in 2025 — pricing, pros, cons, and which one is right for your budget."
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.9rem;
+      }
+      .comparison-table th {
+        background-color: #2e7d32;
+        color: white;
+        padding: 12px 16px;
+        text-align: left;
+      }
+      .comparison-table td {
+        padding: 11px 16px;
+        border-bottom: 1px solid #ddd;
+      }
+      .comparison-table tr:nth-child(even) {
+        background-color: #f5f5f5;
+      }
+      .comparison-table tr:hover {
+        background-color: #e8f5e9;
+      }
+      .verdict-box {
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        padding: 16px 20px;
+        margin: 24px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .verdict-box h3 {
+        margin-top: 0;
+        color: #2e7d32;
+      }
+      .tip-box {
+        background: #fff8e1;
+        border-left: 4px solid #f9a825;
+        padding: 16px 20px;
+        margin: 24px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .service-section {
+        margin: 32px 0;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #eee;
+      }
+      .service-section:last-of-type {
+        border-bottom: none;
+      }
+      .service-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+      .service-header img {
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+      }
+      .pros-cons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 12px 0;
+      }
+      .pros,
+      .cons {
+        padding: 12px 16px;
+        border-radius: 6px;
+        font-size: 0.92rem;
+      }
+      .pros {
+        background: #e8f5e9;
+      }
+      .cons {
+        background: #fce4ec;
+      }
+      .pros h4 {
+        color: #2e7d32;
+        margin-top: 0;
+      }
+      .cons h4 {
+        color: #c62828;
+        margin-top: 0;
+      }
+      .pros ul,
+      .cons ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .cta-link {
+        display: inline-block;
+        background: #2e7d32;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+      .cta-link:hover {
+        background: #1b5e20;
+      }
+      @media (max-width: 600px) {
+        .pros-cons {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,96 +132,324 @@
 
     <main>
       <h2>Top 5 Grocery Delivery Services in 2025</h2>
+
       <p>
-        Saving time and money on groceries is easier than ever with delivery
-        services. Here are the top 5 services you should consider:
+        Grocery delivery has gone from a luxury to a genuine money-saver — if
+        you pick the right service. The wrong one can quietly cost you hundreds
+        of dollars a year in markups, service fees, and subscriptions you don't
+        fully use. This guide breaks down the top 5 options in 2025 so you can
+        choose the one that actually fits your budget and lifestyle.
       </p>
 
-      <h3>1. Instacart</h3>
-      <div class="image-right">
-        <img
-          src="images/instacart.png"
-          alt="Instacart logo"
-          class="service-image"
-        />
-      </div>
-      <p>
-        Instacart lets you shop from local stores and delivers groceries to your
-        door.
-        <a href="YOUR_INSTACART_AFFILIATE_LINK" target="_blank">Sign up here</a>
-        to start saving time!
-      </p>
-      <div style="clear: both"></div>
+      <!-- Quick Comparison Table -->
+      <h3>Quick Comparison</h3>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Monthly Cost</th>
+            <th>Item Markup</th>
+            <th>Store Selection</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Instacart+</strong></td>
+            <td>$9.99/mo</td>
+            <td>~15–20%</td>
+            <td>1,400+ stores</td>
+            <td>Multi-store shoppers</td>
+          </tr>
+          <tr>
+            <td><strong>HelloFresh</strong></td>
+            <td>~$8–12/serving</td>
+            <td>N/A (meal kits)</td>
+            <td>HelloFresh only</td>
+            <td>Meal planning beginners</td>
+          </tr>
+          <tr>
+            <td><strong>Walmart+</strong></td>
+            <td>$12.95/mo</td>
+            <td>None</td>
+            <td>Walmart only</td>
+            <td>Walmart regulars</td>
+          </tr>
+          <tr>
+            <td><strong>Amazon Fresh</strong></td>
+            <td>Included with Prime ($14.99/mo)</td>
+            <td>Low–none</td>
+            <td>Amazon + Whole Foods</td>
+            <td>Prime members</td>
+          </tr>
+          <tr>
+            <td><strong>Thrive Market</strong></td>
+            <td>$12/mo (or $60/yr billed annually)</td>
+            <td>25–50% below retail</td>
+            <td>Thrive Market only</td>
+            <td>Organic/natural buyers</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <h3>2. HelloFresh</h3>
-      <div class="image-right">
-        <img
-          src="images/hellofresh.jpeg"
-          alt="HelloFresh logo"
-          class="service-image"
-        />
-      </div>
-      <p>
-        HelloFresh delivers meal kits with pre-portioned ingredients.
-        <a href="YOUR_HELLOFRESH_AFFILIATE_LINK" target="_blank"
-          >Try HelloFresh now</a
+      <!-- Instacart -->
+      <div class="service-section">
+        <div class="service-header">
+          <img src="images/instacart.png" alt="Instacart logo" />
+          <h3 style="margin: 0">1. Instacart</h3>
+        </div>
+        <p>
+          Instacart is the most flexible grocery delivery service available —
+          you can order from over 1,400 stores including Costco, Aldi, Kroger,
+          Publix, and Whole Foods all in one app. The Instacart+ membership
+          ($9.99/month) removes delivery fees on orders over $35 and includes a
+          free Peacock subscription.
+        </p>
+        <p>
+          The trade-off is a
+          <strong>15–20% markup on item prices</strong> compared to what you'd
+          pay in-store. On a $200 grocery order that's an extra $30–40 every
+          time. If you shop frequently, that adds up fast — so Instacart works
+          best when convenience is the priority or when you're accessing stores
+          that aren't near you.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Widest store selection</li>
+              <li>Easy multi-store ordering</li>
+              <li>Often has promo codes for new users</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Item prices marked up 15–20%</li>
+              <li>5% service fee on top</li>
+              <li>Shopper quality varies</li>
+            </ul>
+          </div>
+        </div>
+        <a href="YOUR_INSTACART_AFFILIATE_LINK" target="_blank" class="cta-link"
+          >Try Instacart+ Free for 2 Weeks →</a
         >
-        and get your first week discounted.
-      </p>
-      <div style="clear: both"></div>
-
-      <h3>3. Walmart+</h3>
-      <div class="image-right">
-        <img
-          src="images/walmart.png"
-          alt="Walmart logo"
-          class="service-image"
-        />
       </div>
-      <p>
-        Walmart+ offers fast delivery and free shipping on groceries.
-        <a href="YOUR_WALMART_AFFILIATE_LINK" target="_blank">Learn more here</a
-        >.
-      </p>
-      <div style="clear: both"></div>
 
-      <h3>4. Amazon Fresh</h3>
-      <div class="image-right">
-        <img
-          src="images/amazonfresh.png"
-          alt="Amazon Fresh logo"
-          class="service-image"
-        />
+      <!-- HelloFresh -->
+      <div class="service-section">
+        <div class="service-header">
+          <img src="images/hellofresh.jpeg" alt="HelloFresh logo" />
+          <h3 style="margin: 0">2. HelloFresh</h3>
+        </div>
+        <p>
+          HelloFresh isn't a traditional grocery delivery service — it's a meal
+          kit service that sends pre-portioned ingredients with step-by-step
+          recipes. Plans start around $8–12 per serving depending on how many
+          meals and people you choose. It's not the cheapest way to eat, but it
+          dramatically reduces food waste and takes the guesswork out of meal
+          planning.
+        </p>
+        <p>
+          New subscribers typically get their
+          <strong>first box heavily discounted</strong>
+          (sometimes 60% off), which makes it a low-risk way to try it out. If
+          you find yourself throwing away produce regularly or spending too much
+          on takeout because you don't know what to cook, HelloFresh can
+          actually save you money overall.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Reduces food waste significantly</li>
+              <li>No meal planning required</li>
+              <li>Great intro discount for new users</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>More expensive than cooking from scratch</li>
+              <li>Portions can be small</li>
+              <li>Requires cooking — not ready-made</li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="YOUR_HELLOFRESH_AFFILIATE_LINK"
+          target="_blank"
+          class="cta-link"
+          >Get Your First HelloFresh Box Discounted →</a
+        >
       </div>
-      <p>
-        Amazon Fresh delivers fresh groceries to your door.
-        <a href="YOUR_AMAZONFRESH_AFFILIATE_LINK" target="_blank"
-          >Check it out here</a
-        >.
-      </p>
-      <div style="clear: both"></div>
 
-      <h3>5. Thrive Market</h3>
-      <div class="image-right">
-        <img
-          src="images/thrive.jpeg"
-          alt="Thrive Market logo"
-          class="service-image"
-        />
+      <!-- Walmart+ -->
+      <div class="service-section">
+        <div class="service-header">
+          <img src="images/walmart.png" alt="Walmart logo" />
+          <h3 style="margin: 0">3. Walmart+</h3>
+        </div>
+        <p>
+          Walmart+ is the best value membership for everyday grocery shoppers
+          who already buy from Walmart. At $12.95/month (or $98/year), it offers
+          free same-day delivery on orders over $35 with
+          <strong>zero item markups</strong> — you pay exactly what you'd pay
+          in-store. That alone sets it apart from most competitors.
+        </p>
+        <p>
+          The membership also includes fuel discounts at Walmart and Murphy gas
+          stations, a free Paramount+ subscription, and Rx savings on
+          prescriptions. For a family doing a weekly Walmart run, the
+          subscription pays for itself quickly.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>No item price markup</li>
+              <li>Fuel discounts + Paramount+ included</li>
+              <li>Same-day delivery available</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Walmart stores only</li>
+              <li>Limited organic/specialty selection</li>
+              <li>Substitutions can be hit or miss</li>
+            </ul>
+          </div>
+        </div>
+        <a href="YOUR_WALMART_AFFILIATE_LINK" target="_blank" class="cta-link"
+          >Try Walmart+ Free for 30 Days →</a
+        >
       </div>
-      <p>
-        Thrive Market offers organic and specialty foods at discounted prices.
-        <a href="YOUR_THRIVEMARKET_AFFILIATE_LINK" target="_blank"
-          >Join Thrive Market here</a
-        >.
-      </p>
-      <div style="clear: both"></div>
 
-      <p>
-        All of these services make grocery shopping more convenient and can save
-        you money if used wisely. Try one that fits your lifestyle and see the
-        difference!
-      </p>
+      <!-- Amazon Fresh -->
+      <div class="service-section">
+        <div class="service-header">
+          <img src="images/amazonfresh.png" alt="Amazon Fresh logo" />
+          <h3 style="margin: 0">4. Amazon Fresh</h3>
+        </div>
+        <p>
+          Amazon Fresh is included with an Amazon Prime membership ($14.99/month
+          or $139/year), making it a great option if you're already a Prime
+          subscriber. You can order from Amazon's own grocery inventory as well
+          as Whole Foods, with free delivery on orders over $35 in most areas.
+        </p>
+        <p>
+          Prices are generally competitive with in-store, especially on Amazon's
+          own brands. The selection is strong for pantry staples, snacks, and
+          household items. If you regularly order from Amazon anyway, Fresh is
+          essentially a free add-on that makes your membership even more
+          valuable.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Free with existing Prime membership</li>
+              <li>Access to Whole Foods delivery</li>
+              <li>Competitive pricing on staples</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Requires Prime membership</li>
+              <li>Not available in all areas</li>
+              <li>Fresh produce quality can vary</li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="YOUR_AMAZONFRESH_AFFILIATE_LINK"
+          target="_blank"
+          class="cta-link"
+          >Try Amazon Prime + Fresh →</a
+        >
+      </div>
+
+      <!-- Thrive Market -->
+      <div class="service-section">
+        <div class="service-header">
+          <img src="images/thrive.jpeg" alt="Thrive Market logo" />
+          <h3 style="margin: 0">5. Thrive Market</h3>
+        </div>
+        <p>
+          Thrive Market is the hidden gem on this list for health-conscious
+          shoppers. It's a membership-based online store ($12/month or $60/year)
+          that sells organic, non-GMO, and specialty foods at
+          <strong>25–50% below typical retail prices</strong>. Think Costco
+          meets Whole Foods, but online.
+        </p>
+        <p>
+          The savings are real — members report saving an average of $32 per
+          order compared to buying the same items at a health food store. It
+          works best as a supplement to your regular grocery shopping: stock up
+          on pantry staples, snacks, supplements, and cleaning products through
+          Thrive, then buy fresh produce locally.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>25–50% below health food store prices</li>
+              <li>Huge organic and specialty selection</li>
+              <li>Free gift with first order for new members</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>No fresh produce or perishables</li>
+              <li>Annual membership required for best value</li>
+              <li>Shipping takes 1–3 days (not same-day)</li>
+            </ul>
+          </div>
+        </div>
+        <a
+          href="YOUR_THRIVEMARKET_AFFILIATE_LINK"
+          target="_blank"
+          class="cta-link"
+          >Join Thrive Market & Get a Free Gift →</a
+        >
+      </div>
+
+      <!-- Tip -->
+      <div class="tip-box">
+        <strong>💡 Pro tip:</strong> You don't have to pick just one! Many savvy
+        shoppers use Walmart+ or Amazon Fresh for weekly staples (no markup) and
+        Thrive Market for bulk organic pantry items. Using two services
+        strategically often beats paying markup on everything through a single
+        service.
+      </div>
+
+      <!-- Verdict -->
+      <div class="verdict-box">
+        <h3>Which One Should You Choose?</h3>
+        <p>
+          <strong>Best overall value:</strong> Walmart+ — no markups, useful
+          perks, and a free trial.
+        </p>
+        <p>
+          <strong>Best for Prime members:</strong> Amazon Fresh — it's
+          essentially free if you already pay for Prime.
+        </p>
+        <p>
+          <strong>Best for organic shoppers:</strong> Thrive Market — the
+          savings on specialty items are hard to beat.
+        </p>
+        <p>
+          <strong>Best for flexibility:</strong> Instacart+ — worth it if you
+          shop across multiple stores regularly.
+        </p>
+        <p>
+          <strong>Best for meal planning:</strong> HelloFresh — reduces food
+          waste and takes the stress out of weeknight cooking.
+        </p>
+      </div>
 
       <a href="blog.html" class="button">← Back to Blog</a>
     </main>
