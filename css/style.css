@@ -1,20 +1,182 @@
-/* Base layout */
-body {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  background-color: #ffffff; /* Clean white background */
-  color: #333333; /* Dark readable text */
+/* ============================================
+   Smart Grocery Savings — Main Stylesheet
+   ============================================ */
+
+/* ── GOOGLE FONTS ── */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap");
+
+/* ── CSS VARIABLES ── */
+:root {
+  --green: #2e7d32;
+  --green-dark: #1b5e20;
+  --green-mid: #2e8b57;
+  --green-light: #e8f5e9;
+  --orange: #e65100;
+  --orange-mid: #ff7f50;
+  --cream: #fafaf7;
+  --ink: #1a1a1a;
+  --muted: #666;
+  --border: #e0e0e0;
+  --white: #ffffff;
 }
 
-/* Header */
+/* ── RESET ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── BASE ── */
+body {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ── HEADER ── */
 header {
-  background-color: #0972e3; /* Navy blue */
+  background-color: var(--green-dark);
   color: white;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   text-align: center;
 }
 
-/* Post 2 images */
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #c8e6c9;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: white;
+  text-decoration: none;
+}
+
+/* ── MAIN CONTENT ── */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+main h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--green-mid);
+  margin-bottom: 1rem;
+}
+
+main h3 {
+  color: #003366;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+main a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: var(--orange-mid);
+}
+
+/* ── BUTTONS ── */
+.button {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  margin: 0.75rem 0.25rem 0.75rem 0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.button-green,
+.button {
+  background-color: var(--green);
+  color: white;
+}
+
+.button-green:hover,
+.button:hover {
+  background-color: var(--green-dark);
+  color: white;
+}
+
+.button-orange {
+  background-color: var(--orange-mid);
+  color: white;
+}
+
+.button-orange:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* ── IMAGES ── */
+.shared-banner,
+.blog-banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.banner-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .image-right {
   float: right;
   margin-left: 1rem;
@@ -28,60 +190,27 @@ header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* grocery image banner and caption applied to all pages */
-.shared-banner {
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.contact-image {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 1rem auto;
+  margin: 0 auto 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.banner-caption {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
-/* blog image banner and caption */
-.blog-banner {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.banner-caption {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.5rem;
-}
-
+/* ── BLOG GRID (blog.html legacy) ── */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-.blog-banner {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.banner-caption {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #555;
-  margin-top: 0.5rem;
 }
 
 .blog-grid {
@@ -92,210 +221,71 @@ header {
 }
 
 .blog-card {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 1.5rem;
   text-align: center;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
 .blog-card h3 {
   margin: 1rem 0 0.5rem;
-  color: #2e8b57;
+  color: var(--green-mid);
 }
 
 .blog-card p {
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .post-date {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: var(--muted);
   margin-bottom: 0.5rem;
 }
 
-.post-image {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* Navigation */
-nav a {
-  color: white;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  color: #90ee90; /* Light green hover */
-  text-decoration: underline;
-}
-
-/* Main content */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin: 1rem 0;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-green {
-  background-color: #2e8b57; /* Smart green */
-  color: white;
-}
-.button-green:hover {
-  background-color: #3cb371;
-}
-
-.button-orange {
-  background-color: #ff7f50; /* Energetic orange */
-  color: white;
-}
-.button-orange:hover {
-  background-color: #ff6347;
-}
-
-/* Blog Post Layout */
+/* ── ARTICLE (post pages) ── */
 article {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
 }
 
-.post-date {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
 article h2 {
-  color: #2e8b57; /* Green for post title */
+  font-family: "Playfair Display", serif;
+  color: var(--green-mid);
   margin-bottom: 0.5rem;
 }
 
 article h3 {
-  color: #003366; /* Blue for subheadings */
+  color: #003366;
   margin-top: 2rem;
 }
 
 blockquote {
   font-style: italic;
   color: #555;
-  border-left: 4px solid #2e8b57;
+  border-left: 4px solid var(--green);
   padding-left: 1rem;
   margin: 1.5rem 0;
 }
 
-.button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  background-color: #2e8b57;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #3cb371;
-}
-
-/* Blog Post Styling */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-main h2 {
-  color: #2e8b57; /* Green for post title */
-  margin-bottom: 1rem;
-}
-
-main h3 {
-  color: #003366; /* Blue for subheadings */
-  margin-top: 1.5rem;
-}
-
-main p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-main a {
-  color: #2e8b57;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-main a:hover {
-  text-decoration: underline;
-  color: #ff7f50; /* Orange hover for CTA feel */
-}
-
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #2e8b57;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #3cb371;
-}
-
-/* Contact Page Styles */
-.container {
-  max-width: 500px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.container h2 {
-  text-align: center;
-  color: #2e8b57; /* Match your green theme */
-}
-
+/* ── CONTACT FORM ── */
 label {
   display: block;
   margin-top: 16px;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 input,
@@ -306,6 +296,13 @@ textarea {
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--green);
 }
 
 textarea {
@@ -313,25 +310,29 @@ textarea {
   min-height: 80px;
 }
 
-button {
+button[type="submit"],
+form button {
   margin-top: 18px;
-  background: #2e8b57;
-  color: #fff;
+  background: var(--green);
+  color: white;
   border: none;
   padding: 12px 0;
   width: 100%;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: inherit;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
 }
 
-button:hover {
-  background: #3cb371;
+button[type="submit"]:hover,
+form button:hover {
+  background: var(--green-dark);
 }
 
 .note {
-  font-size: 13px;
+  font-size: 0.82rem;
   color: #888;
   margin-top: 10px;
   text-align: center;
@@ -340,7 +341,7 @@ button:hover {
 .subtitle {
   text-align: center;
   font-size: 1rem;
-  color: #555;
+  color: var(--muted);
   margin-bottom: 1rem;
 }
 
@@ -353,53 +354,51 @@ button:hover {
 
 .success-message {
   background-color: #e6ffe6;
-  color: #2e8b57;
+  color: var(--green);
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
   margin-top: 1rem;
-  display: none; /* toggle with JS */
+  display: none;
 }
 
-.contact-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 2rem;
-  border-radius: 8px;
-}
-
-/* Post 1 images */
-.service-image {
-  display: block;
-  max-width: 200px;
-  height: auto;
-  margin: 1rem 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.image-right {
-  float: right;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.service-image {
-  width: 120px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Post 2 images */
-
-/* Additional styles can be added here for other pages as needed. */
-
-/* Footer */
-footer {
+/* ── AD SECTION ── */
+.ad-section {
+  margin-top: 30px;
   text-align: center;
-  padding: 1rem;
-  color: #666;
+}
+
+/* ── FOOTER ── */
+footer {
+  background-color: var(--ink);
+  color: #aaa;
+  text-align: center;
+  padding: 1.25rem;
   margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #a5d6a7;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ── UTILITIES ── */
+.text-center {
+  text-align: center;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
 }
