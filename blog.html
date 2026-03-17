@@ -79,13 +79,37 @@
       nav a.active {
         color: white;
       }
-      .page-hero {
-        background: linear-gradient(135deg, var(--green-dark) 0%, #388e3c 100%);
-        color: white;
-        padding: 48px 24px;
-        text-align: center;
+
+      /* ── BLOG BANNER ── */
+      .blog-banner-wrap {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
       }
-      .page-hero p {
+      .blog-banner-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .blog-banner-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(27, 94, 32, 0.5) 0%,
+          rgba(27, 94, 32, 0.82) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        color: white;
+      }
+      .blog-banner-overlay p {
         font-size: 0.75rem;
         font-weight: 600;
         letter-spacing: 2.5px;
@@ -93,16 +117,17 @@
         color: #a5d6a7;
         margin-bottom: 12px;
       }
-      .page-hero h2 {
+      .blog-banner-overlay h2 {
         font-family: "Playfair Display", serif;
         font-size: clamp(1.8rem, 4vw, 2.6rem);
         font-weight: 900;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
-      .page-hero span {
+      .blog-banner-overlay span {
         font-size: 1rem;
         color: #c8e6c9;
       }
+
       .site-body {
         max-width: 1100px;
         margin: 0 auto;
@@ -416,17 +441,25 @@
       </div>
     </header>
 
-    <div class="page-hero">
-      <p>The Blog</p>
-      <h2>Grocery Savings, Honestly Reviewed</h2>
-      <span>Tips, comparisons, and strategies — updated regularly</span>
+    <!-- Blog banner with photo -->
+    <div class="blog-banner-wrap">
+      <img src="images/blog.jpeg" alt="Smart Grocery Savings Blog" />
+      <div class="blog-banner-overlay">
+        <p>The Blog</p>
+        <h2>Grocery Savings, Honestly Reviewed</h2>
+        <span>Tips, comparisons, and strategies — updated regularly</span>
+      </div>
     </div>
 
     <div class="site-body">
       <main>
+        <!-- Featured post -->
         <div class="section-label">Featured Post</div>
         <div class="featured-post">
-          <img src="images/blog2.jpeg" alt="Grocery savings tips" />
+          <img
+            src="images/save_money.jpg"
+            alt="Ways to save money on groceries"
+          />
           <div class="featured-post-body">
             <span class="post-tag">Tips &amp; Strategies</span>
             <h3>7 Ways to Cut $50 Off Your Monthly Grocery Bill</h3>
@@ -439,14 +472,11 @@
           </div>
         </div>
 
+        <!-- All posts -->
         <div class="section-label">All Posts</div>
         <div class="post-grid">
           <a href="post_1.html" class="post-card" style="animation-delay: 0.1s">
-            <img
-              src="images/instacart.png"
-              alt="Grocery delivery services"
-              style="object-fit: contain; background: #f5f5f5; padding: 16px"
-            />
+            <img src="images/grocery.jpeg" alt="Grocery delivery services" />
             <div class="post-card-body">
               <span class="post-tag">Comparison</span>
               <h3>Top 5 Grocery Delivery Services in 2025</h3>
@@ -461,11 +491,7 @@
           </a>
 
           <a href="post_2.html" class="post-card" style="animation-delay: 0.2s">
-            <img
-              src="images/walmart.png"
-              alt="Walmart vs Instacart"
-              style="object-fit: contain; background: #f5f5f5; padding: 16px"
-            />
+            <img src="images/full_cart.jpeg" alt="Walmart vs Instacart" />
             <div class="post-card-body">
               <span class="post-tag">Head-to-Head</span>
               <h3>Walmart+ vs Instacart: Which Saves You More?</h3>
@@ -480,7 +506,7 @@
           </a>
 
           <a href="post_3.html" class="post-card" style="animation-delay: 0.3s">
-            <img src="images/full_cart.jpeg" alt="Save $50 on groceries" />
+            <img src="images/blog2.jpeg" alt="Save $50 on groceries" />
             <div class="post-card-body">
               <span class="post-tag">Tips</span>
               <h3>7 Ways to Cut $50 Off Your Monthly Grocery Bill</h3>
@@ -495,7 +521,7 @@
           </a>
 
           <a href="post_4.html" class="post-card" style="animation-delay: 0.4s">
-            <img src="images/grocery.jpeg" alt="Best cashback apps" />
+            <img src="images/blog.jpeg" alt="Best cashback apps" />
             <div class="post-card-body">
               <span class="post-tag">App Reviews</span>
               <h3>Best Cashback Apps for Groceries in 2025</h3>
@@ -510,7 +536,10 @@
           </a>
 
           <a href="post_5.html" class="post-card" style="animation-delay: 0.5s">
-            <img src="images/blog2.jpeg" alt="Meal planning on $50 a week" />
+            <img
+              src="images/hellofresh.jpeg"
+              alt="Meal planning on $50 a week"
+            />
             <div class="post-card-body">
               <span class="post-tag">Meal Planning</span>
               <h3>How to Meal Plan on $50 a Week</h3>
@@ -525,11 +554,7 @@
           </a>
 
           <a href="post_6.html" class="post-card" style="animation-delay: 0.6s">
-            <img
-              src="images/walmart.png"
-              alt="Aldi vs Walmart"
-              style="object-fit: contain; background: #f5f5f5; padding: 16px"
-            />
+            <img src="images/aldi_vs_walmart.jpg" alt="Aldi vs Walmart" />
             <div class="post-card-body">
               <span class="post-tag">Head-to-Head</span>
               <h3>Aldi vs Walmart: Which is Actually Cheaper?</h3>
