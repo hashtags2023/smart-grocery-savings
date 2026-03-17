@@ -26,13 +26,11 @@
         --muted: #666;
         --border: #e0e0e0;
       }
-
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family: "Source Sans 3", sans-serif;
         background: var(--cream);
@@ -40,8 +38,6 @@
         font-size: 16px;
         line-height: 1.6;
       }
-
-      /* ── HEADER ── */
       header {
         background: var(--green-dark);
         color: white;
@@ -83,8 +79,6 @@
       nav a.active {
         color: white;
       }
-
-      /* ── PAGE HERO ── */
       .page-hero {
         background: linear-gradient(135deg, var(--green-dark) 0%, #388e3c 100%);
         color: white;
@@ -109,8 +103,6 @@
         font-size: 1rem;
         color: #c8e6c9;
       }
-
-      /* ── MAIN LAYOUT ── */
       .site-body {
         max-width: 1100px;
         margin: 0 auto;
@@ -124,8 +116,6 @@
           grid-template-columns: 1fr;
         }
       }
-
-      /* ── SECTION LABEL ── */
       .section-label {
         font-size: 0.72rem;
         font-weight: 600;
@@ -136,8 +126,6 @@
         padding-bottom: 6px;
         margin-bottom: 28px;
       }
-
-      /* ── FEATURED POST ── */
       .featured-post {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -217,8 +205,6 @@
       .read-more:hover {
         gap: 12px;
       }
-
-      /* ── POST GRID ── */
       .post-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -230,7 +216,6 @@
           grid-template-columns: 1fr;
         }
       }
-
       .post-card {
         background: white;
         border-radius: 10px;
@@ -295,8 +280,6 @@
         text-decoration: none;
         font-size: 0.85rem;
       }
-
-      /* ── SIDEBAR ── */
       .sidebar {
         display: flex;
         flex-direction: column;
@@ -311,7 +294,6 @@
       .sidebar-widget .section-label {
         margin-bottom: 16px;
       }
-
       .newsletter-widget {
         background: var(--green-dark);
         color: white;
@@ -352,7 +334,6 @@
       .newsletter-form button:hover {
         background: #bf360c;
       }
-
       .category-list {
         list-style: none;
       }
@@ -384,7 +365,6 @@
         padding: 2px 9px;
         border-radius: 12px;
       }
-
       .tip-widget p {
         font-size: 0.88rem;
         color: var(--muted);
@@ -398,8 +378,6 @@
       .tip-widget p strong {
         color: var(--ink);
       }
-
-      /* ── FOOTER ── */
       footer {
         background: var(--ink);
         color: #aaa;
@@ -413,7 +391,6 @@
         text-decoration: none;
         margin: 0 8px;
       }
-
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -447,7 +424,6 @@
 
     <div class="site-body">
       <main>
-        <!-- Featured -->
         <div class="section-label">Featured Post</div>
         <div class="featured-post">
           <img src="images/blog2.jpeg" alt="Grocery savings tips" />
@@ -463,7 +439,6 @@
           </div>
         </div>
 
-        <!-- All Posts -->
         <div class="section-label">All Posts</div>
         <div class="post-grid">
           <a href="post_1.html" class="post-card" style="animation-delay: 0.1s">
@@ -477,8 +452,7 @@
               </p>
             </div>
             <div class="post-card-footer">
-              <span>Oct 15, 2025</span>
-              <a href="post_1.html">Read More →</a>
+              <span>Oct 15, 2025</span><a href="post_1.html">Read More →</a>
             </div>
           </a>
 
@@ -493,8 +467,7 @@
               </p>
             </div>
             <div class="post-card-footer">
-              <span>Oct 15, 2025</span>
-              <a href="post_2.html">Read More →</a>
+              <span>Oct 15, 2025</span><a href="post_2.html">Read More →</a>
             </div>
           </a>
 
@@ -509,14 +482,61 @@
               </p>
             </div>
             <div class="post-card-footer">
-              <span>Oct 15, 2025</span>
-              <a href="post_3.html">Read More →</a>
+              <span>Oct 15, 2025</span><a href="post_3.html">Read More →</a>
+            </div>
+          </a>
+
+          <a href="post_4.html" class="post-card" style="animation-delay: 0.4s">
+            <img src="images/grocery.jpeg" alt="Best cashback apps" />
+            <div class="post-card-body">
+              <span class="post-tag">App Reviews</span>
+              <h3>Best Cashback Apps for Groceries in 2025</h3>
+              <p>
+                Ibotta, Fetch Rewards, Rakuten and more — ranked by how much
+                they actually pay and how to stack them for maximum savings.
+              </p>
+            </div>
+            <div class="post-card-footer">
+              <span>Nov 1, 2025</span><a href="post_4.html">Read More →</a>
+            </div>
+          </a>
+
+          <a href="post_5.html" class="post-card" style="animation-delay: 0.5s">
+            <img src="images/blog2.jpeg" alt="Meal planning on $50 a week" />
+            <div class="post-card-body">
+              <span class="post-tag">Meal Planning</span>
+              <h3>How to Meal Plan on $50 a Week</h3>
+              <p>
+                A step-by-step system with a sample weekly meal plan, full
+                shopping list, and budget breakdown that actually works.
+              </p>
+            </div>
+            <div class="post-card-footer">
+              <span>Nov 8, 2025</span><a href="post_5.html">Read More →</a>
+            </div>
+          </a>
+
+          <a href="post_6.html" class="post-card" style="animation-delay: 0.6s">
+            <img
+              src="images/walmart.png"
+              alt="Aldi vs Walmart"
+              style="object-fit: contain; background: #f5f5f5; padding: 16px"
+            />
+            <div class="post-card-body">
+              <span class="post-tag">Head-to-Head</span>
+              <h3>Aldi vs Walmart: Which is Actually Cheaper?</h3>
+              <p>
+                We compared 20+ common grocery items side by side. The winner
+                might change how you shop every week.
+              </p>
+            </div>
+            <div class="post-card-footer">
+              <span>Nov 15, 2025</span><a href="post_6.html">Read More →</a>
             </div>
           </a>
         </div>
       </main>
 
-      <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-widget newsletter-widget">
           <div class="section-label">Newsletter</div>
@@ -536,13 +556,16 @@
             </li>
             <li>
               <a href="#">Tips &amp; Strategies</a
-              ><span class="category-count">1</span>
+              ><span class="category-count">2</span>
             </li>
             <li>
-              <a href="#">App Reviews</a><span class="category-count">0</span>
+              <a href="#">App Reviews</a><span class="category-count">1</span>
             </li>
             <li>
-              <a href="#">Meal Planning</a><span class="category-count">0</span>
+              <a href="#">Meal Planning</a><span class="category-count">1</span>
+            </li>
+            <li>
+              <a href="#">Head-to-Head</a><span class="category-count">2</span>
             </li>
           </ul>
         </div>
@@ -560,6 +583,10 @@
           <p>
             <strong>🏷️ Check unit prices.</strong> The bigger package isn't
             always the better deal.
+          </p>
+          <p>
+            <strong>🛒 Try Aldi first.</strong> Aldi wins on price for 75% of
+            common grocery items.
           </p>
         </div>
       </aside>
