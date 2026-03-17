@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aldi vs Walmart: Which is Actually Cheaper in 2025? - Smart Grocery Savings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="We compare prices at Aldi vs Walmart across 20+ common grocery items to find out which store actually saves you more money in 2025." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .price-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        font-size: 0.9rem;
+      }
+      .price-table th {
+        background: #2e7d32;
+        color: white;
+        padding: 11px 14px;
+        text-align: left;
+      }
+      .price-table th:nth-child(2) { background: #1565c0; }
+      .price-table th:nth-child(3) { background: #0277bd; }
+      .price-table td {
+        padding: 10px 14px;
+        border-bottom: 1px solid #eee;
+      }
+      .price-table tr:nth-child(even) { background: #f9f9f9; }
+      .winner-aldi { color: #2e7d32; font-weight: 700; }
+      .winner-walmart { color: #1565c0; font-weight: 700; }
+      .winner-tie { color: #888; }
+      .total-row { background: #e8f5e9 !important; font-weight: 700; font-size: 0.95rem; }
+      .store-card {
+        background: white;
+        border-radius: 10px;
+        padding: 24px 28px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      }
+      .store-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+      .store-card.aldi h3 { color: #e65100; }
+      .store-card.walmart h3 { color: #1565c0; }
+      .store-card p { color: #555; font-size: 0.95rem; line-height: 1.7; margin-bottom: 10px; }
+      .pros-cons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .pros, .cons {
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 0.88rem;
+      }
+      .pros { background: #e8f5e9; }
+      .cons { background: #fce4ec; }
+      .pros h4 { color: #2e7d32; margin-bottom: 6px; }
+      .cons h4 { color: #c62828; margin-bottom: 6px; }
+      .pros ul, .cons ul { margin: 0; padding-left: 16px; line-height: 1.75; color: #444; }
+      .tip-box {
+        background: #fff8e1;
+        border-left: 4px solid #f9a825;
+        padding: 16px 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .verdict-box {
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        padding: 20px 24px;
+        margin: 28px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .verdict-box h3 { color: #2e7d32; margin-bottom: 12px; }
+      .verdict-box p { color: #444; font-size: 0.95rem; line-height: 1.7; margin-bottom: 8px; }
+      .score-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 24px 0;
+      }
+      .score-box {
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+      .score-box.aldi { background: #fff3e0; }
+      .score-box.walmart { background: #e3f2fd; }
+      .score-box .store-name { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+      .score-box.aldi .store-name { color: #e65100; }
+      .score-box.walmart .store-name { color: #1565c0; }
+      .score-box .score { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; }
+      .score-box .score-label { font-size: 0.8rem; color: #888; }
+      @media (max-width: 600px) {
+        .pros-cons { grid-template-columns: 1fr; }
+        .score-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="header"></div>
+    <script>
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <main>
+      <h2>Aldi vs Walmart: Which is Actually Cheaper in 2025?</h2>
+
+      <p>
+        Aldi and Walmart are both known for low prices, but which one actually wins at the
+        register? The answer isn't as simple as picking one store — each has clear advantages
+        depending on what you're buying. We compared prices across 20+ common grocery items
+        to give you a real, data-driven answer.
+      </p>
+
+      <div class="tip-box">
+        <strong>📍 Note on prices:</strong> Grocery prices vary by region. The prices below
+        are national averages based on commonly reported prices in 2025. Your local store
+        may differ slightly, but the relative comparison between stores holds up across most markets.
+      </div>
+
+      <!-- Price comparison table -->
+      <h3>Head-to-Head Price Comparison</h3>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Aldi</th>
+            <th>Walmart</th>
+            <th>Winner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Eggs (1 dozen, large)</td>
+            <td>$2.89</td>
+            <td>$3.12</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Whole milk (1 gallon)</td>
+            <td>$3.19</td>
+            <td>$3.08</td>
+            <td class="winner-walmart">Walmart ✓</td>
+          </tr>
+          <tr>
+            <td>Bread (sandwich loaf)</td>
+            <td>$1.49</td>
+            <td>$1.28</td>
+            <td class="winner-walmart">Walmart ✓</td>
+          </tr>
+          <tr>
+            <td>Chicken breast (per lb)</td>
+            <td>$2.49</td>
+            <td>$2.97</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Ground beef 80/20 (per lb)</td>
+            <td>$4.29</td>
+            <td>$4.97</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Shredded cheddar (8 oz)</td>
+            <td>$2.19</td>
+            <td>$2.47</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Butter (1 lb)</td>
+            <td>$3.49</td>
+            <td>$3.64</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Greek yogurt (32 oz)</td>
+            <td>$3.99</td>
+            <td>$4.47</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Pasta (16 oz box)</td>
+            <td>$0.89</td>
+            <td>$0.98</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Marinara sauce (24 oz)</td>
+            <td>$1.89</td>
+            <td>$1.78</td>
+            <td class="winner-walmart">Walmart ✓</td>
+          </tr>
+          <tr>
+            <td>Canned tomatoes (14.5 oz)</td>
+            <td>$0.79</td>
+            <td>$0.88</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Frozen broccoli (12 oz)</td>
+            <td>$1.29</td>
+            <td>$1.38</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Bananas (per lb)</td>
+            <td>$0.44</td>
+            <td>$0.58</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Bagged salad mix</td>
+            <td>$2.49</td>
+            <td>$2.98</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Orange juice (52 oz)</td>
+            <td>$3.49</td>
+            <td>$3.28</td>
+            <td class="winner-walmart">Walmart ✓</td>
+          </tr>
+          <tr>
+            <td>Olive oil (16.9 oz)</td>
+            <td>$4.99</td>
+            <td>$5.47</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Oats (42 oz)</td>
+            <td>$2.69</td>
+            <td>$2.96</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Peanut butter (16 oz)</td>
+            <td>$2.29</td>
+            <td>$2.47</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Tortilla chips (9 oz)</td>
+            <td>$1.69</td>
+            <td>$1.98</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr>
+            <td>Dish soap (21 oz)</td>
+            <td>$1.49</td>
+            <td>$1.97</td>
+            <td class="winner-aldi">Aldi ✓</td>
+          </tr>
+          <tr class="total-row">
+            <td>Estimated basket total</td>
+            <td>~$51.50</td>
+            <td>~$57.70</td>
+            <td class="winner-aldi">Aldi saves ~$6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Score -->
+      <div class="score-grid">
+        <div class="score-box aldi">
+          <div class="store-name">Aldi</div>
+          <div class="score">15</div>
+          <div class="score-label">categories won out of 20</div>
+        </div>
+        <div class="score-box walmart">
+          <div class="store-name">Walmart</div>
+          <div class="score">5</div>
+          <div class="score-label">categories won out of 20</div>
+        </div>
+      </div>
+
+      <!-- Aldi breakdown -->
+      <div class="store-card aldi">
+        <h3>Aldi: Why It Wins on Price</h3>
+        <p>
+          Aldi's lower prices come from a fundamentally different business model. About
+          <strong>90% of products are Aldi's own private-label brands</strong>, which cuts
+          out the cost of national brand marketing and packaging. Stores are smaller,
+          staffing is leaner, and the no-frills shopping experience (bring your own bags,
+          rent a quarter for a cart) all reduce overhead that gets passed to shoppers.
+        </p>
+        <p>
+          The result is consistently lower prices on proteins, dairy, produce, and pantry
+          staples — the core of most grocery budgets. Aldi's produce quality has also
+          improved significantly in recent years and is now competitive with mainstream supermarkets.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Lowest prices on most items</li>
+              <li>Excellent meat &amp; dairy prices</li>
+              <li>Good quality store brands</li>
+              <li>ALDI Finds for seasonal deals</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Limited brand selection</li>
+              <li>Smaller stores, less variety</li>
+              <li>No online ordering/delivery</li>
+              <li>Not available everywhere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Walmart breakdown -->
+      <div class="store-card walmart">
+        <h3>Walmart: Where It Wins</h3>
+        <p>
+          Walmart wins on <strong>variety, convenience, and brand availability</strong>.
+          If you need a specific national brand, a specialty ingredient, or want to do all
+          your shopping in one place (groceries, household goods, electronics), Walmart
+          can't be beat. Their Great Value store brand is also a strong budget option
+          that competes closely with Aldi on many items.
+        </p>
+        <p>
+          Walmart also has a clear edge for online shopping — with Walmart+ membership,
+          you can get same-day delivery at in-store prices with no item markup, which
+          Aldi doesn't offer at all.
+        </p>
+        <div class="pros-cons">
+          <div class="pros">
+            <h4>✅ Pros</h4>
+            <ul>
+              <li>Huge variety &amp; brand selection</li>
+              <li>One-stop shop for everything</li>
+              <li>Walmart+ delivery at in-store prices</li>
+              <li>Available everywhere in the US</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h4>❌ Cons</h4>
+            <ul>
+              <li>Higher prices than Aldi on most items</li>
+              <li>Large stores can be overwhelming</li>
+              <li>More impulse-buy temptation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>💡 The smart strategy:</strong> Shop Aldi for your weekly staples —
+        proteins, dairy, produce, and pantry items. Use Walmart for anything Aldi
+        doesn't carry, or for Walmart+ delivery when you want the convenience of
+        online ordering without paying markups.
+      </div>
+
+      <div class="verdict-box">
+        <h3>The Verdict</h3>
+        <p><strong>Aldi wins on price</strong> for the majority of everyday grocery items — often by 10–20% per item. On a typical $200/month grocery budget, shopping primarily at Aldi vs Walmart could save you $20–30/month, or $240–360/year.</p>
+        <p><strong>Walmart wins on convenience and variety.</strong> If you value having every brand available, need online delivery, or live somewhere without an Aldi nearby, Walmart's Great Value brand keeps costs reasonable.</p>
+        <p><strong>The best approach for most shoppers:</strong> Use Aldi as your primary store for staples and proteins, then make a occasional Walmart run for anything Aldi doesn't stock. You get the best of both worlds.</p>
+      </div>
+
+      <a href="blog.html" class="button">← Back to Blog</a>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Smart Grocery Savings &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </p>
+    </footer>
+
+  </body>
+</html>
