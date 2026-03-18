@@ -226,16 +226,17 @@
         <div class="sidebar-widget newsletter-widget">
           <div class="section-label">Newsletter</div>
           <p>Get weekly deals, coupons, and savings tips delivered to your inbox — free.</p>
-          <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/xwvrwzpo" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required />
-            <input type="hidden" name="_subject" value="New Newsletter Signup — Smart Grocery Savings" />
-            <button type="submit">Get Free Tips →</button>
-          </form>
-          <div class="newsletter-success" id="newsletterSuccess">
-            ✅ You're subscribed! Tips coming soon.
-          </div>
+          <form class="newsletter-form" id="newsletterForm">
+          <input type="hidden" name="access_key" value="c78d6c6a-9ff5-4180-92e3-6af9b4c45920" />
+          <input type="hidden" name="subject" value="New Newsletter Signup — Smart Grocery Savings" />
+          <input type="hidden" name="from_name" value="Smart Grocery Savings Newsletter" />
+          <input type="email" name="email" placeholder="your@email.com" required />
+          <button type="submit">Get Free Tips →</button>
+        </form>
+        <div class="newsletter-success" id="newsletterSuccess">
+          ✅ You're subscribed! Tips coming soon.
         </div>
-
+       
         <div class="sidebar-widget">
           <div class="section-label">Did You Know?</div>
           <div class="stat-grid">
@@ -285,25 +286,23 @@
     </footer>
 
     <script>
-      document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            form.style.display = 'none';
-            document.getElementById('newsletterSuccess').style.display = 'block';
-          }
-        } catch(err) {
-          console.error(err);
-        }
+  document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(e.target));
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
       });
-    </script>
+      const result = await res.json();
+      if (result.success) {
+        e.target.style.display = 'none';
+        document.getElementById('newsletterSuccess').style.display = 'block';
+      }
+    } catch(err) { console.error(err); }
+  });
+</script>
 
   </body>
 </html>

@@ -184,11 +184,23 @@
         <h3>Send a Message</h3>
         <span class="subtitle">We'll get back to you as soon as possible.</span>
 
-        <form
-          id="contactForm"
-          action="https://formspree.io/f/xwvrwzpo"
-          method="POST"
-        >
+        <form id="contactForm">
+          <input
+            type="hidden"
+            name="access_key"
+            value="c78d6c6a-9ff5-4180-92e3-6af9b4c45920"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Message — Smart Grocery Savings"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Smart Grocery Savings Website"
+          />
+
           <div class="form-group">
             <label for="name">Your Name</label>
             <input
@@ -218,11 +230,7 @@
               required
             ></textarea>
           </div>
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Contact Message — Smart Grocery Savings"
-          />
+
           <button type="submit" class="submit-btn">Send Message →</button>
           <p class="form-note">
             We value your feedback and questions about grocery savings!
@@ -257,13 +265,18 @@
           e.preventDefault();
           const form = e.target;
           const data = new FormData(form);
+          const json = Object.fromEntries(data);
           try {
-            const res = await fetch(form.action, {
+            const res = await fetch("https://api.web3forms.com/submit", {
               method: "POST",
-              body: data,
-              headers: { Accept: "application/json" },
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(json),
             });
-            if (res.ok) {
+            const result = await res.json();
+            if (result.success) {
               form.style.display = "none";
               document.getElementById("successMsg").style.display = "block";
             }

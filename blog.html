@@ -4,81 +4,448 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Smart Grocery Savings</title>
-    <meta name="description" content="Tips, reviews, and money-saving strategies to help you spend less on groceries every month." />
+    <meta
+      name="description"
+      content="Tips, reviews, and money-saving strategies to help you spend less on groceries every month."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      :root { --green:#2e7d32; --green-dark:#1b5e20; --green-light:#e8f5e9; --orange:#e65100; --cream:#fafaf7; --ink:#1a1a1a; --muted:#666; --border:#e0e0e0; }
-      * { box-sizing:border-box; margin:0; padding:0; }
-      body { font-family:"Source Sans 3",sans-serif; background:var(--cream); color:var(--ink); font-size:16px; line-height:1.6; }
-      header { background:var(--green-dark); color:white; position:sticky; top:0; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.2); }
-      .header-inner { max-width:1100px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-      header h1 { font-family:"Playfair Display",serif; font-size:1.5rem; font-weight:900; letter-spacing:-0.5px; }
-      header h1 span { color:#a5d6a7; }
-      nav a { color:#c8e6c9; text-decoration:none; font-size:0.9rem; font-weight:600; margin-left:20px; text-transform:uppercase; letter-spacing:0.5px; transition:color 0.2s; }
-      nav a:hover, nav a.active { color:white; }
-      .blog-banner-wrap { position:relative; width:100%; height:320px; overflow:hidden; }
-      .blog-banner-wrap img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
-      .blog-banner-overlay { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(27,94,32,0.5) 0%,rgba(27,94,32,0.82) 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; color:white; }
-      .blog-banner-overlay p { font-size:0.75rem; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:#a5d6a7; margin-bottom:12px; }
-      .blog-banner-overlay h2 { font-family:"Playfair Display",serif; font-size:clamp(1.8rem,4vw,2.6rem); font-weight:900; margin-bottom:10px; }
-      .blog-banner-overlay span { font-size:1rem; color:#c8e6c9; }
-      .site-body { max-width:1100px; margin:0 auto; padding:48px 24px; display:grid; grid-template-columns:1fr 300px; gap:48px; }
-      @media(max-width:800px){.site-body{grid-template-columns:1fr;}}
-      .section-label { font-size:0.72rem; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--green); border-bottom:2px solid var(--green); padding-bottom:6px; margin-bottom:28px; }
-      .featured-post { display:grid; grid-template-columns:1fr 1fr; gap:0; background:white; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.08); margin-bottom:48px; transition:box-shadow 0.2s; animation:fadeIn 0.6s ease both; }
-      .featured-post:hover { box-shadow:0 8px 28px rgba(0,0,0,0.12); }
-      @media(max-width:600px){.featured-post{grid-template-columns:1fr;}}
-      .featured-post .featured-img-wrap { background:#f5f5f5; display:flex; align-items:center; justify-content:center; padding:24px; min-height:260px; }
-      .featured-post .featured-img-wrap img { max-width:100%; max-height:220px; object-fit:contain; display:block; border-radius:6px; }
-      .featured-post-body { padding:32px 28px; display:flex; flex-direction:column; justify-content:center; }
-      .post-tag { display:inline-block; background:var(--green-light); color:var(--green); font-size:0.72rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:3px; margin-bottom:14px; width:fit-content; }
-      .featured-post-body h3 { font-family:"Playfair Display",serif; font-size:1.55rem; font-weight:700; line-height:1.25; margin-bottom:12px; color:var(--ink); }
-      .featured-post-body p { color:var(--muted); font-size:0.95rem; line-height:1.65; margin-bottom:8px; }
-      .post-meta { font-size:0.8rem; color:#aaa; margin-bottom:18px; }
-      .read-more { color:var(--green); font-weight:600; font-size:0.9rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:gap 0.2s; margin-top:auto; }
-      .read-more:hover { gap:12px; }
-      .post-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:48px; }
-      @media(max-width:600px){.post-grid{grid-template-columns:1fr;}}
-      .post-card { background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.06); display:flex; flex-direction:column; transition:box-shadow 0.2s,transform 0.2s; text-decoration:none; color:inherit; animation:fadeIn 0.6s ease both; }
-      .post-card:hover { box-shadow:0 8px 24px rgba(0,0,0,0.1); transform:translateY(-4px); }
-      .post-card img { width:100%; height:160px; object-fit:cover; display:block; }
-      .post-card-body { padding:18px 20px; flex:1; display:flex; flex-direction:column; }
-      .post-card-body .post-tag { margin-bottom:10px; }
-      .post-card-body h3 { font-family:"Playfair Display",serif; font-size:1.05rem; font-weight:700; line-height:1.3; margin-bottom:8px; color:var(--ink); }
-      .post-card-body p { color:var(--muted); font-size:0.88rem; line-height:1.6; flex:1; }
-      .post-card-footer { padding:12px 20px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; }
-      .post-card-footer span { color:#aaa; }
-      .post-card-footer a { color:var(--green); font-weight:600; text-decoration:none; font-size:0.85rem; }
-      .sidebar { display:flex; flex-direction:column; gap:28px; }
-      .sidebar-widget { background:white; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,0,0,0.05); }
-      .sidebar-widget .section-label { margin-bottom:16px; }
-      .newsletter-widget { background:var(--green-dark); color:white; }
-      .newsletter-widget .section-label { color:#a5d6a7; border-color:#a5d6a7; }
-      .newsletter-widget p { font-size:0.9rem; color:#c8e6c9; margin-bottom:14px; }
-      .newsletter-form { display:flex; flex-direction:column; gap:10px; }
-      .newsletter-form input { padding:10px 14px; border-radius:6px; border:none; font-size:0.9rem; font-family:inherit; }
-      .newsletter-form button { padding:10px; background:var(--orange); color:white; border:none; border-radius:6px; font-weight:600; font-size:0.9rem; cursor:pointer; font-family:inherit; transition:background 0.2s; }
-      .newsletter-form button:hover { background:#bf360c; }
-      .newsletter-success { display:none; background:rgba(255,255,255,0.15); border-radius:6px; padding:10px 14px; color:#a5d6a7; font-size:0.9rem; font-weight:600; text-align:center; margin-top:4px; }
-      .category-list { list-style:none; }
-      .category-list li { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid var(--border); font-size:0.9rem; }
-      .category-list li:last-child { border-bottom:none; }
-      .category-list a { color:var(--ink); text-decoration:none; font-weight:600; transition:color 0.2s; }
-      .category-list a:hover { color:var(--green); }
-      .category-count { background:var(--green-light); color:var(--green); font-size:0.75rem; font-weight:700; padding:2px 9px; border-radius:12px; }
-      .tip-widget p { font-size:0.88rem; color:var(--muted); line-height:1.65; padding:10px 0; border-bottom:1px solid var(--border); }
-      .tip-widget p:last-child { border-bottom:none; }
-      .tip-widget p strong { color:var(--ink); }
-      footer { background:var(--ink); color:#aaa; text-align:center; padding:24px; font-size:0.85rem; margin-top:40px; }
-      footer a { color:#a5d6a7; text-decoration:none; margin:0 8px; }
-      @keyframes fadeIn { from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);} }
+      :root {
+        --green: #2e7d32;
+        --green-dark: #1b5e20;
+        --green-light: #e8f5e9;
+        --orange: #e65100;
+        --cream: #fafaf7;
+        --ink: #1a1a1a;
+        --muted: #666;
+        --border: #e0e0e0;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background: var(--cream);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      header {
+        background: var(--green-dark);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+      .header-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+      }
+      header h1 span {
+        color: #a5d6a7;
+      }
+      nav a {
+        color: #c8e6c9;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-left: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+      }
+      nav a:hover,
+      nav a.active {
+        color: white;
+      }
+      .blog-banner-wrap {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+      }
+      .blog-banner-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .blog-banner-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(27, 94, 32, 0.5) 0%,
+          rgba(27, 94, 32, 0.82) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+        color: white;
+      }
+      .blog-banner-overlay p {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #a5d6a7;
+        margin-bottom: 12px;
+      }
+      .blog-banner-overlay h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 900;
+        margin-bottom: 10px;
+      }
+      .blog-banner-overlay span {
+        font-size: 1rem;
+        color: #c8e6c9;
+      }
+      .site-body {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 48px 24px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 48px;
+      }
+      @media (max-width: 800px) {
+        .site-body {
+          grid-template-columns: 1fr;
+        }
+      }
+      .section-label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--green);
+        border-bottom: 2px solid var(--green);
+        padding-bottom: 6px;
+        margin-bottom: 28px;
+      }
+      .featured-post {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        margin-bottom: 48px;
+        transition: box-shadow 0.2s;
+        animation: fadeIn 0.6s ease both;
+      }
+      .featured-post:hover {
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+      }
+      @media (max-width: 600px) {
+        .featured-post {
+          grid-template-columns: 1fr;
+        }
+      }
+      .featured-post .featured-img-wrap {
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        min-height: 260px;
+      }
+      .featured-post .featured-img-wrap img {
+        max-width: 100%;
+        max-height: 220px;
+        object-fit: contain;
+        display: block;
+        border-radius: 6px;
+      }
+      .featured-post-body {
+        padding: 32px 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .post-tag {
+        display: inline-block;
+        background: var(--green-light);
+        color: var(--green);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 3px;
+        margin-bottom: 14px;
+        width: fit-content;
+      }
+      .featured-post-body h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.55rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        color: var(--ink);
+      }
+      .featured-post-body p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 8px;
+      }
+      .post-meta {
+        font-size: 0.8rem;
+        color: #aaa;
+        margin-bottom: 18px;
+      }
+      .read-more {
+        color: var(--green);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s;
+        margin-top: auto;
+      }
+      .read-more:hover {
+        gap: 12px;
+      }
+      .post-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
+      }
+      @media (max-width: 600px) {
+        .post-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .post-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        display: flex;
+        flex-direction: column;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+        text-decoration: none;
+        color: inherit;
+        animation: fadeIn 0.6s ease both;
+      }
+      .post-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+      }
+      .post-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+      }
+      .post-card-body {
+        padding: 18px 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .post-card-body .post-tag {
+        margin-bottom: 10px;
+      }
+      .post-card-body h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        color: var(--ink);
+      }
+      .post-card-body p {
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.6;
+        flex: 1;
+      }
+      .post-card-footer {
+        padding: 12px 20px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+      }
+      .post-card-footer span {
+        color: #aaa;
+      }
+      .post-card-footer a {
+        color: var(--green);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.85rem;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .sidebar-widget {
+        background: white;
+        border-radius: 10px;
+        padding: 22px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .sidebar-widget .section-label {
+        margin-bottom: 16px;
+      }
+      .newsletter-widget {
+        background: var(--green-dark);
+        color: white;
+      }
+      .newsletter-widget .section-label {
+        color: #a5d6a7;
+        border-color: #a5d6a7;
+      }
+      .newsletter-widget p {
+        font-size: 0.9rem;
+        color: #c8e6c9;
+        margin-bottom: 14px;
+      }
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .newsletter-form input {
+        padding: 10px 14px;
+        border-radius: 6px;
+        border: none;
+        font-size: 0.9rem;
+        font-family: inherit;
+      }
+      .newsletter-form button {
+        padding: 10px;
+        background: var(--orange);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.2s;
+      }
+      .newsletter-form button:hover {
+        background: #bf360c;
+      }
+      .newsletter-success {
+        display: none;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 6px;
+        padding: 10px 14px;
+        color: #a5d6a7;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 4px;
+      }
+      .category-list {
+        list-style: none;
+      }
+      .category-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9rem;
+      }
+      .category-list li:last-child {
+        border-bottom: none;
+      }
+      .category-list a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+      .category-list a:hover {
+        color: var(--green);
+      }
+      .category-count {
+        background: var(--green-light);
+        color: var(--green);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 9px;
+        border-radius: 12px;
+      }
+      .tip-widget p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.65;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .tip-widget p:last-child {
+        border-bottom: none;
+      }
+      .tip-widget p strong {
+        color: var(--ink);
+      }
+      footer {
+        background: var(--ink);
+        color: #aaa;
+        text-align: center;
+        padding: 24px;
+        font-size: 0.85rem;
+        margin-top: 40px;
+      }
+      footer a {
+        color: #a5d6a7;
+        text-decoration: none;
+        margin: 0 8px;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
   <body>
-
     <header>
       <div class="header-inner">
         <h1>Smart <span>Grocery</span> Savings</h1>
@@ -105,124 +472,203 @@
         <div class="section-label">Featured Post</div>
         <div class="featured-post">
           <div class="featured-img-wrap">
-            <img src="images/save_money.jpg" alt="Ways to save money on groceries" />
+            <img
+              src="images/save_money.jpg"
+              alt="Ways to save money on groceries"
+            />
           </div>
           <div class="featured-post-body">
             <span class="post-tag">Tips &amp; Strategies</span>
             <h3>7 Ways to Cut $50 Off Your Monthly Grocery Bill</h3>
             <p class="post-meta">October 15, 2025</p>
-            <p>Seven practical strategies — from stacking cashback apps to buying in bulk — that can save the average household $95–190 every month.</p>
+            <p>
+              Seven practical strategies — from stacking cashback apps to buying
+              in bulk — that can save the average household $95–190 every month.
+            </p>
             <a href="post_3.html" class="read-more">Read full article →</a>
           </div>
         </div>
 
         <div class="section-label">All Posts</div>
         <div class="post-grid">
-
-          <a href="post_1.html" class="post-card" style="animation-delay:0.1s">
+          <a href="post_1.html" class="post-card" style="animation-delay: 0.1s">
             <img src="images/top5.png" alt="Top 5 grocery delivery services" />
             <div class="post-card-body">
               <span class="post-tag">Comparison</span>
               <h3>Top 5 Grocery Delivery Services in 2025</h3>
-              <p>From Instacart to Thrive Market — a full breakdown of costs, markups, and which saves you most.</p>
+              <p>
+                From Instacart to Thrive Market — a full breakdown of costs,
+                markups, and which saves you most.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Oct 15, 2025</span><a href="post_1.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Oct 15, 2025</span><a href="post_1.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_2.html" class="post-card" style="animation-delay:0.2s">
-            <img src="images/walmart_vs_instacart2.png" alt="Walmart vs Instacart" />
+          <a href="post_2.html" class="post-card" style="animation-delay: 0.2s">
+            <img
+              src="images/walmart_vs_instacart2.png"
+              alt="Walmart vs Instacart"
+            />
             <div class="post-card-body">
               <span class="post-tag">Head-to-Head</span>
               <h3>Walmart+ vs Instacart: Which Saves You More?</h3>
-              <p>One charges no item markups. The other quietly inflates prices by 15–20%. We do the math.</p>
+              <p>
+                One charges no item markups. The other quietly inflates prices
+                by 15–20%. We do the math.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Oct 15, 2025</span><a href="post_2.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Oct 15, 2025</span><a href="post_2.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_3.html" class="post-card" style="animation-delay:0.3s">
-            <img src="images/cut_bills_in_half.png" alt="Cut your grocery bill" />
+          <a href="post_3.html" class="post-card" style="animation-delay: 0.3s">
+            <img
+              src="images/cut_bills_in_half.png"
+              alt="Cut your grocery bill"
+            />
             <div class="post-card-body">
               <span class="post-tag">Tips</span>
               <h3>7 Ways to Cut $50 Off Your Monthly Grocery Bill</h3>
-              <p>No extreme couponing required. These seven habits can save most households $100+ per month.</p>
+              <p>
+                No extreme couponing required. These seven habits can save most
+                households $100+ per month.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Oct 15, 2025</span><a href="post_3.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Oct 15, 2025</span><a href="post_3.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_4.html" class="post-card" style="animation-delay:0.4s">
+          <a href="post_4.html" class="post-card" style="animation-delay: 0.4s">
             <img src="images/cash_back.png" alt="Best cashback apps" />
             <div class="post-card-body">
               <span class="post-tag">App Reviews</span>
               <h3>Best Cashback Apps for Groceries in 2025</h3>
-              <p>Ibotta, Fetch Rewards, Rakuten and more — ranked by savings and how to stack them.</p>
+              <p>
+                Ibotta, Fetch Rewards, Rakuten and more — ranked by savings and
+                how to stack them.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Nov 1, 2025</span><a href="post_4.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Nov 1, 2025</span><a href="post_4.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_5.html" class="post-card" style="animation-delay:0.5s">
-            <img src="images/hellofresh.jpeg" alt="Meal planning on $50 a week" />
+          <a href="post_5.html" class="post-card" style="animation-delay: 0.5s">
+            <img
+              src="images/hellofresh.jpeg"
+              alt="Meal planning on $50 a week"
+            />
             <div class="post-card-body">
               <span class="post-tag">Meal Planning</span>
               <h3>How to Meal Plan on $50 a Week</h3>
-              <p>A step-by-step system with a sample meal plan, shopping list, and budget breakdown.</p>
+              <p>
+                A step-by-step system with a sample meal plan, shopping list,
+                and budget breakdown.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Nov 8, 2025</span><a href="post_5.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Nov 8, 2025</span><a href="post_5.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_6.html" class="post-card" style="animation-delay:0.6s">
+          <a href="post_6.html" class="post-card" style="animation-delay: 0.6s">
             <img src="images/aldi_vs_walmart.jpg" alt="Aldi vs Walmart" />
             <div class="post-card-body">
               <span class="post-tag">Head-to-Head</span>
               <h3>Aldi vs Walmart: Which is Actually Cheaper?</h3>
-              <p>We compared 20+ common grocery items side by side. The winner might surprise you.</p>
+              <p>
+                We compared 20+ common grocery items side by side. The winner
+                might surprise you.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Nov 15, 2025</span><a href="post_6.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Nov 15, 2025</span><a href="post_6.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_7.html" class="post-card" style="animation-delay:0.7s">
+          <a href="post_7.html" class="post-card" style="animation-delay: 0.7s">
             <img src="images/grocery.jpeg" alt="Does Ibotta save money" />
             <div class="post-card-body">
               <span class="post-tag">App Review</span>
               <h3>Does Ibotta Really Save You Money? Honest Review</h3>
-              <p>How much you can realistically save, what the catches are, and whether it's worth it in 2025.</p>
+              <p>
+                How much you can realistically save, what the catches are, and
+                whether it's worth it in 2025.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Dec 1, 2025</span><a href="post_7.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Dec 1, 2025</span><a href="post_7.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_8.html" class="post-card" style="animation-delay:0.8s">
-            <img src="images/full_cart.jpeg" alt="Store brands vs name brands" />
+          <a href="post_8.html" class="post-card" style="animation-delay: 0.8s">
+            <img
+              src="images/pushing_full_cart_funny1"
+              alt="Store brands vs name brands"
+            />
             <div class="post-card-body">
               <span class="post-tag">Tips</span>
               <h3>Store Brands vs Name Brands: Are They Worth It?</h3>
-              <p>Where to always buy generic and where name brands are genuinely worth paying more for.</p>
+              <p>
+                Where to always buy generic and where name brands are genuinely
+                worth paying more for.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Dec 8, 2025</span><a href="post_8.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Dec 8, 2025</span><a href="post_8.html">Read More →</a>
+            </div>
           </a>
 
-          <a href="post_9.html" class="post-card" style="animation-delay:0.9s">
+          <a href="post_9.html" class="post-card" style="animation-delay: 0.9s">
             <img src="images/blog2.jpeg" alt="How to save at Costco" />
             <div class="post-card-body">
               <span class="post-tag">Guide</span>
               <h3>How to Save Money at Costco in 2025</h3>
-              <p>What to buy, what to skip, and 8 tips to make your $65 membership pay for itself many times over.</p>
+              <p>
+                What to buy, what to skip, and 8 tips to make your $65
+                membership pay for itself many times over.
+              </p>
             </div>
-            <div class="post-card-footer"><span>Dec 15, 2025</span><a href="post_9.html">Read More →</a></div>
+            <div class="post-card-footer">
+              <span>Dec 15, 2025</span><a href="post_9.html">Read More →</a>
+            </div>
           </a>
-
         </div>
       </main>
 
       <aside class="sidebar">
-
         <div class="sidebar-widget newsletter-widget">
           <div class="section-label">Newsletter</div>
           <p>Weekly deals and savings tips — free, no spam.</p>
-          <form class="newsletter-form" id="blogNewsletter" action="https://formspree.io/f/xwvrwzpo" method="POST">
-            <input type="email" name="email" placeholder="your@email.com" required />
-            <input type="hidden" name="_subject" value="New Newsletter Signup — Smart Grocery Savings Blog" />
-            <button type="submit">Subscribe Free →</button>
+          <form class="newsletter-form" id="newsletterForm">
+            <input
+              type="hidden"
+              name="access_key"
+              value="c78d6c6a-9ff5-4180-92e3-6af9b4c45920"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Newsletter Signup — Smart Grocery Savings"
+            />
+            <input
+              type="hidden"
+              name="from_name"
+              value="Smart Grocery Savings Newsletter"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+            <button type="submit">Get Free Tips →</button>
           </form>
-          <div class="newsletter-success" id="blogNewsletterSuccess">
+          <div class="newsletter-success" id="newsletterSuccess">
             ✅ You're subscribed! Tips coming soon.
           </div>
         </div>
@@ -230,23 +676,46 @@
         <div class="sidebar-widget">
           <div class="section-label">Categories</div>
           <ul class="category-list">
-            <li><a href="#">Delivery Services</a><span class="category-count">2</span></li>
-            <li><a href="#">Tips &amp; Strategies</a><span class="category-count">3</span></li>
-            <li><a href="#">App Reviews</a><span class="category-count">2</span></li>
-            <li><a href="#">Meal Planning</a><span class="category-count">1</span></li>
-            <li><a href="#">Head-to-Head</a><span class="category-count">2</span></li>
+            <li>
+              <a href="#">Delivery Services</a
+              ><span class="category-count">2</span>
+            </li>
+            <li>
+              <a href="#">Tips &amp; Strategies</a
+              ><span class="category-count">3</span>
+            </li>
+            <li>
+              <a href="#">App Reviews</a><span class="category-count">2</span>
+            </li>
+            <li>
+              <a href="#">Meal Planning</a><span class="category-count">1</span>
+            </li>
+            <li>
+              <a href="#">Head-to-Head</a><span class="category-count">2</span>
+            </li>
             <li><a href="#">Guides</a><span class="category-count">1</span></li>
           </ul>
         </div>
 
         <div class="sidebar-widget tip-widget">
           <div class="section-label">Quick Tips</div>
-          <p><strong>💡 Shop with a list.</strong> Unplanned shoppers spend 23% more per trip on average.</p>
-          <p><strong>📱 Use Ibotta.</strong> Stack cashback offers on top of existing store sales for double savings.</p>
-          <p><strong>🏷️ Check unit prices.</strong> The bigger package isn't always the better deal.</p>
-          <p><strong>🛒 Try Aldi first.</strong> Aldi wins on price for 75% of common grocery items.</p>
+          <p>
+            <strong>💡 Shop with a list.</strong> Unplanned shoppers spend 23%
+            more per trip on average.
+          </p>
+          <p>
+            <strong>📱 Use Ibotta.</strong> Stack cashback offers on top of
+            existing store sales for double savings.
+          </p>
+          <p>
+            <strong>🏷️ Check unit prices.</strong> The bigger package isn't
+            always the better deal.
+          </p>
+          <p>
+            <strong>🛒 Try Aldi first.</strong> Aldi wins on price for 75% of
+            common grocery items.
+          </p>
         </div>
-
       </aside>
     </div>
 
@@ -261,23 +730,30 @@
     </footer>
 
     <script>
-      document.getElementById('blogNewsletter').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-          if (res.ok) {
-            form.style.display = 'none';
-            document.getElementById('blogNewsletterSuccess').style.display = 'block';
+      document
+        .getElementById("newsletterForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const data = Object.fromEntries(new FormData(e.target));
+          try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+            const result = await res.json();
+            if (result.success) {
+              e.target.style.display = "none";
+              document.getElementById("newsletterSuccess").style.display =
+                "block";
+            }
+          } catch (err) {
+            console.error(err);
           }
-        } catch(err) { console.error(err); }
-      });
+        });
     </script>
-
   </body>
 </html>
