@@ -203,6 +203,14 @@
         margin-bottom: 14px;
         width: fit-content;
       }
+      .post-tag.news {
+        background: #fce4ec;
+        color: #c62828;
+      }
+      .post-tag.health {
+        background: #e3f2fd;
+        color: #1565c0;
+      }
       .featured-post-body h3 {
         font-family: "Playfair Display", serif;
         font-size: 1.55rem;
@@ -265,6 +273,12 @@
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         transform: translateY(-4px);
       }
+      .post-card.breaking {
+        border-top: 3px solid #c62828;
+      }
+      .post-card.health-card {
+        border-top: 3px solid #1565c0;
+      }
       .post-card img {
         width: 100%;
         height: 160px;
@@ -310,13 +324,6 @@
         font-weight: 600;
         text-decoration: none;
         font-size: 0.85rem;
-      }
-      .post-card.breaking {
-        border-top: 3px solid #c62828;
-      }
-      .post-tag.news {
-        background: #fce4ec;
-        color: #c62828;
       }
       .sidebar {
         display: flex;
@@ -465,7 +472,6 @@
       </div>
     </header>
 
-    <!-- Banner — fixed path -->
     <div class="blog-banner-wrap">
       <img
         src="images/pushing_full_cart_funny.jpg"
@@ -480,7 +486,6 @@
 
     <div class="site-body">
       <main>
-        <!-- Featured post -->
         <div class="section-label">Featured Post</div>
         <div class="featured-post">
           <div class="featured-img-wrap">
@@ -503,7 +508,6 @@
 
         <div class="section-label">All Posts</div>
         <div class="post-grid">
-          <!-- Post 1 -->
           <a href="post_1.html" class="post-card" style="animation-delay: 0.1s">
             <img src="images/top5.png" alt="Top 5 grocery delivery services" />
             <div class="post-card-body">
@@ -519,7 +523,6 @@
             </div>
           </a>
 
-          <!-- Post 2 -->
           <a href="post_2.html" class="post-card" style="animation-delay: 0.2s">
             <img
               src="images/walmart_vs_instacart2.png"
@@ -538,11 +541,10 @@
             </div>
           </a>
 
-          <!-- Post 3 -->
           <a href="post_3.html" class="post-card" style="animation-delay: 0.3s">
             <img
               src="images/cut_bills_in_half.png"
-              alt="Cut your grocery bill in half"
+              alt="Cut your grocery bill"
             />
             <div class="post-card-body">
               <span class="post-tag">Tips</span>
@@ -557,12 +559,8 @@
             </div>
           </a>
 
-          <!-- Post 4 -->
           <a href="post_4.html" class="post-card" style="animation-delay: 0.4s">
-            <img
-              src="images/cash_back.png"
-              alt="Best cashback apps for groceries"
-            />
+            <img src="images/cash_back.png" alt="Best cashback apps" />
             <div class="post-card-body">
               <span class="post-tag">App Reviews</span>
               <h3>Best Cashback Apps for Groceries in 2026</h3>
@@ -576,7 +574,6 @@
             </div>
           </a>
 
-          <!-- Post 5 -->
           <a href="post_5.html" class="post-card" style="animation-delay: 0.5s">
             <img src="images/full_cart.jpg" alt="Meal planning on $50 a week" />
             <div class="post-card-body">
@@ -592,12 +589,8 @@
             </div>
           </a>
 
-          <!-- Post 6 -->
           <a href="post_6.html" class="post-card" style="animation-delay: 0.6s">
-            <img
-              src="images/aldi_vs_walmart.jpg"
-              alt="Aldi vs Walmart price comparison"
-            />
+            <img src="images/aldi_vs_walmart.jpg" alt="Aldi vs Walmart" />
             <div class="post-card-body">
               <span class="post-tag">Head-to-Head</span>
               <h3>Aldi vs Walmart: Which is Actually Cheaper?</h3>
@@ -611,12 +604,8 @@
             </div>
           </a>
 
-          <!-- Post 7 -->
           <a href="post_7.html" class="post-card" style="animation-delay: 0.7s">
-            <img
-              src="images/grocery.jpeg"
-              alt="Does Ibotta really save you money"
-            />
+            <img src="images/grocery.jpeg" alt="Does Ibotta save money" />
             <div class="post-card-body">
               <span class="post-tag">App Review</span>
               <h3>Does Ibotta Really Save You Money? Honest Review</h3>
@@ -630,7 +619,6 @@
             </div>
           </a>
 
-          <!-- Post 8 -->
           <a href="post_8.html" class="post-card" style="animation-delay: 0.8s">
             <img
               src="images/store_brands_vs_name_brands.jpg"
@@ -649,11 +637,10 @@
             </div>
           </a>
 
-          <!-- Post 9 -->
           <a href="post_9.html" class="post-card" style="animation-delay: 0.9s">
             <img
               src="images/how_to_save_money_at_costco.jpg"
-              alt="How to save money at Costco"
+              alt="How to save at Costco"
             />
             <div class="post-card-body">
               <span class="post-tag">Guide</span>
@@ -668,7 +655,6 @@
             </div>
           </a>
 
-          <!-- Post 10 — Breaking News -->
           <a
             href="post_10.html"
             class="post-card breaking"
@@ -690,7 +676,48 @@
               </p>
             </div>
             <div class="post-card-footer">
-              <span>Mar 19, 2026</span><a href="post_10.html">Read More →</a>
+              <span>Mar 10, 2026</span><a href="post_10.html">Read More →</a>
+            </div>
+          </a>
+
+          <a
+            href="post_11.html"
+            class="post-card"
+            style="animation-delay: 1.1s"
+          >
+            <img
+              src="images/aldi_vs_walmart.jpg"
+              alt="Cheapest avocado prices"
+            />
+            <div class="post-card-body">
+              <span class="post-tag">Price Comparison</span>
+              <h3>Where to Buy the Cheapest Avocados in 2026</h3>
+              <p>
+                We compared avocado prices at 8 major stores. Aldi wins at $0.75
+                — but the full breakdown might change where you shop.
+              </p>
+            </div>
+            <div class="post-card-footer">
+              <span>Mar 17, 2026</span><a href="post_11.html">Read More →</a>
+            </div>
+          </a>
+
+          <a
+            href="post_12.html"
+            class="post-card health-card"
+            style="animation-delay: 1.2s"
+          >
+            <img src="images/grocery.jpeg" alt="Food with less microplastics" />
+            <div class="post-card-body">
+              <span class="post-tag health">Health</span>
+              <h3>How to Buy Food with Less Microplastics</h3>
+              <p>
+                Which foods have the most microplastics, which stores are
+                better, and the simple swaps that make a real difference.
+              </p>
+            </div>
+            <div class="post-card-footer">
+              <span>Apr 1, 2026</span><a href="post_12.html">Read More →</a>
             </div>
           </a>
         </div>
@@ -751,6 +778,11 @@
             </li>
             <li><a href="#">Guides</a><span class="category-count">1</span></li>
             <li><a href="#">News</a><span class="category-count">1</span></li>
+            <li>
+              <a href="#">Price Comparison</a
+              ><span class="category-count">1</span>
+            </li>
+            <li><a href="#">Health</a><span class="category-count">1</span></li>
           </ul>
         </div>
 
@@ -771,6 +803,10 @@
           <p>
             <strong>🛒 Try Aldi first.</strong> Aldi wins on price for 75% of
             common grocery items.
+          </p>
+          <p>
+            <strong>🥑 Buy avocados at Aldi.</strong> At $0.75 each it's the
+            cheapest by far.
           </p>
         </div>
       </aside>
