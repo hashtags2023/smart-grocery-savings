@@ -5,3 +5,6 @@ Thumbs.db
 .env
 node_modules/
 smart_grocery_savings_notes.md
+frontend/.env
+frontend/node_modules/
+

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f7f4;
+  color: #1a1a1a;
+}
+
+.status {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+
+.status.error {
+  color: red;
+}
+
+.app-header {
+  background: #2d6a4f;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.app-header p {
+  opacity: 0.85;
+}
+
+.app-main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  color: #2d6a4f;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: #d8f3dc;
+  color: #2d6a4f;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.items-table th {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background: #f4f7f4;
+  color: #555;
+  font-weight: 600;
+}
+
+.items-table td {
+  padding: 0.6rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+.items-table tr:hover td {
+  background: #f9fdf9;
+}
