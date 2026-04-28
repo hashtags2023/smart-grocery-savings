@@ -1,0 +1,7 @@
+{
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/$1" }],
+  "env": {
+    "KROGER_CLIENT_ID": "@kroger_client_id",
+    "KROGER_CLIENT_SECRET": "@kroger_client_secret"
+  }
+}

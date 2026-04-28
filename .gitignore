@@ -8,3 +8,5 @@ smart_grocery_savings_notes.md
 frontend/.env
 frontend/node_modules/
 
+.vercel
+.env*.local
