@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Smart Grocery Savings</title>
+    <title>Blog - Smart Grocery Intelligence Platform</title>
     <meta
       name="description"
       content="Tips, reviews, and money-saving strategies to help you spend less on groceries every month."
@@ -404,7 +404,8 @@
       .category-list li:last-child {
         border-bottom: none;
       }
-      .category-list a {
+      .category-list a,
+      .category-label {
         color: var(--ink);
         text-decoration: none;
         font-weight: 600;
@@ -462,7 +463,7 @@
   <body>
     <header>
       <div class="header-inner">
-        <h1>Smart <span>Grocery</span> Savings</h1>
+        <h1>Smart Grocery <span>Intelligence</span> Platform</h1>
         <nav>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -475,7 +476,7 @@
     <div class="blog-banner-wrap">
       <img
         src="images/pushing_full_cart_funny.jpg"
-        alt="Smart Grocery Savings Blog"
+        alt="Smart Grocery Intelligence Platform Blog"
       />
       <div class="blog-banner-overlay">
         <p>The Blog</p>
@@ -736,12 +737,12 @@
             <input
               type="hidden"
               name="subject"
-              value="New Newsletter Signup — Smart Grocery Savings"
+              value="New Newsletter Signup — Smart Grocery Intelligence Platform"
             />
             <input
               type="hidden"
               name="from_name"
-              value="Smart Grocery Savings Newsletter"
+              value="Smart Grocery Intelligence Platform Newsletter"
             />
             <input
               type="email"
@@ -758,31 +759,33 @@
 
         <div class="sidebar-widget">
           <div class="section-label">Categories</div>
+          <!-- Note: category filtering isn't implemented yet, so these are
+               shown as plain labels rather than links that go nowhere. -->
           <ul class="category-list">
             <li>
-              <a href="#">Delivery Services</a
+              <span class="category-label">Delivery Services</span
               ><span class="category-count">3</span>
             </li>
             <li>
-              <a href="#">Tips &amp; Strategies</a
+              <span class="category-label">Tips &amp; Strategies</span
               ><span class="category-count">3</span>
             </li>
             <li>
-              <a href="#">App Reviews</a><span class="category-count">2</span>
+              <span class="category-label">App Reviews</span><span class="category-count">2</span>
             </li>
             <li>
-              <a href="#">Meal Planning</a><span class="category-count">1</span>
+              <span class="category-label">Meal Planning</span><span class="category-count">1</span>
             </li>
             <li>
-              <a href="#">Head-to-Head</a><span class="category-count">2</span>
+              <span class="category-label">Head-to-Head</span><span class="category-count">2</span>
             </li>
-            <li><a href="#">Guides</a><span class="category-count">1</span></li>
-            <li><a href="#">News</a><span class="category-count">1</span></li>
+            <li><span class="category-label">Guides</span><span class="category-count">1</span></li>
+            <li><span class="category-label">News</span><span class="category-count">1</span></li>
             <li>
-              <a href="#">Price Comparison</a
+              <span class="category-label">Price Comparison</span
               ><span class="category-count">1</span>
             </li>
-            <li><a href="#">Health</a><span class="category-count">1</span></li>
+            <li><span class="category-label">Health</span><span class="category-count">1</span></li>
           </ul>
         </div>
 
@@ -815,7 +818,7 @@
 
     <footer>
       <p>
-        &copy; 2026 Smart Grocery Savings &nbsp;·&nbsp;
+        &copy; 2026 Smart Grocery Intelligence Platform &nbsp;·&nbsp;
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>

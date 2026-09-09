@@ -1,4 +1,4 @@
-# 🛒 Smart Grocery Savings — Development Log
+# 🛒 Smart Grocery Intelligence Platform — Development Log
 
 A running record of engineering decisions, challenges, and lessons learned building this project.
 
@@ -220,6 +220,26 @@ Both are required. RLS policies alone are not enough.
 
 **Goal:**
 Bridge the gap between the static content site and the React app so visitors can discover and use the price comparison tool.
+
+---
+
+## September 9, 2026 — Site Audit & Cleanup
+
+**What I did:**
+- Removed 8 dead affiliate CTA buttons pointing to unfilled `YOUR_..._AFFILIATE_LINK` placeholders (Instacart, Walmart+, HelloFresh, Thrive Market) across `post_1.html`, `post_2.html`, `post_3.html`, `post_10.html` — those programs are still pending/in review, so the buttons were removed rather than left broken or faked
+- Standardized branding to "Smart Grocery Intelligence Platform" across `index.html`, `blog.html`, `disclosure.html`, `css/style.css`, and the React `Navbar.jsx` — previously the homepage/blog said "Smart Grocery Savings" while other pages said "Smart Grocery Intelligence Platform"
+- Fixed `header.html` (the shared header component fetched via JS into `about.html`, `contact.html`, and `post_1.html`/`post_4.html`–`post_12.html`) — it was missing the logo and 🛒 Price Tool link that the homepage header has, even though the per-page CSS comment said it should "match the homepage exactly"
+- Fixed the default Vite `<title>frontend</title>` on `frontend/index.html`, now reads "Price Tool | Smart Grocery Intelligence Platform"
+- Replaced the non-functional blog category filter links (`href="#"`, no filtering logic behind them) with plain non-clickable labels so they don't look like broken links
+
+**Decisions made:**
+- Chose to remove pending affiliate CTAs entirely rather than link to non-affiliate URLs, since the monetization tracker showed Instacart/Walmart/HelloFresh/Thrive Market are still pending or have open issues — link back in once each program is approved
+- Left `post_2.html`'s "2025" title as-is — verified it correctly reflects the post's actual publish date (Dec 2025), not a bug
+
+**Still open:**
+- Re-add affiliate CTA buttons once Instacart, Walmart, HelloFresh, and Thrive Market are approved
+- Wire up Ibotta (active affiliate program, currently unused anywhere on the site)
+- Decide whether to build real category filtering on the blog or leave labels static
 
 ---
 

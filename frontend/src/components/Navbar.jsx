@@ -12,7 +12,7 @@ function Navbar({ user }) {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo">
-        🛒 Smart Grocery Savings
+        🛒 Smart Grocery Intelligence Platform
       </Link>
       <div className="nav-links">
         {user ? (
